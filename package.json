@@ -1,0 +1,14 @@
+{
+  "name": "air-quality-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others --names \"BACKEND,FRONTEND\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" \"python app.py\" \"cd frontend && npm start\"",
+    "backend": "python app.py",
+    "frontend": "cd frontend && npm start",
+    "install-all": "npm install && cd frontend && npm install"
+  }
+}
